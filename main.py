@@ -70,10 +70,11 @@ cursor.executescript(
 # insert values into gpkg_contents tables
 
 cursor.execute(
-    "insert into gpkg_contents values ('point','features','point','point','2019-02-19T10:49:06.022Z',NULL,NULL,NULL,NULL,27700);"
-)
-cursor.execute(
-    "insert into gpkg_contents values ('poly','features','poly','poly','2019-02-19T10:49:06.022Z',NULL,NULL,NULL,NULL,27700);"
+    """
+    insert into gpkg_contents(table_name, data_type, identifier, srs_id) values 
+    ('point','features','point',27700),
+    ('poly','features', 'poly', 27700);
+    """
 )
 
 # insert values into gpkg_geometry_column tables
