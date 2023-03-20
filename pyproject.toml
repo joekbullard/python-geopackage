@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "py-gpkg"
+version = "0.1.0"
+description = ""
+authors = ["Joe Bullard <joekbullard@gmail.com>"]
+readme = "README.md"
+packages = [{include = "py_gpkg"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+GDAL = "^3.6"
+pyproj = "^3.4.1"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
